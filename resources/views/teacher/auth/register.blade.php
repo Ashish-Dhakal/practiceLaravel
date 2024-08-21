@@ -1,7 +1,10 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-      
+    <form method="POST" action="{{ route('teacher.register') }}">
         @csrf
+
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center p-5">
+            {{ __('Teacher Register') }}
+        </h2>
 
         <!-- Name -->
         <div>
@@ -41,7 +44,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('admin.login') }}">
                 {{ __('Already registered?') }}
             </a>
 

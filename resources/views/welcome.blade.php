@@ -76,6 +76,35 @@
                                     </a>
                                 @endif
                             @endauth
+
+
+                            @auth('teacher')
+                            <a
+                                href="{{ url('/dashboard') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            >
+                                Teacher Dashboard
+                            </a>
+                        @else
+                            <a
+                                href="{{ route('teacher.login') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            >
+                                Teacher Log in
+                            </a>
+
+                            @if (Route::has('teacher.register'))
+                                <a
+                                    href="{{ route('teacher.register') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                >
+                                    Teacher Register
+                                </a>
+                            @endif
+                        @endauth
+
+
+
                                 
                             </nav>
                         @endif
