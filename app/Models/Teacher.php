@@ -21,8 +21,11 @@ class Teacher extends Authenticatable
         'name',
         'email',
         'password',
+        'fullname',
+        'zip_code',
+        'address',
+        'phone',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
